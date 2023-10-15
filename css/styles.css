@@ -28,14 +28,14 @@ a {
 }
 
 .container {
-  width: 1158px;
-  padding: 0 15px;
+  width: 100%;
+  padding: 0 16px;
   margin: 0 auto;
 }
 
 .section {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 img {
@@ -53,18 +53,22 @@ box-sizing: border-box;
 /* ================ ================== */
 
 /* ================ MIXED 2nd,3rd and 4th block ============= */
-.features-text,
+.features-text {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.32px;
+  font-weight: 500;
+}
+
 .team-list-text,
 .portfolio-list-text {
   font-size: 16px;
+  font-weight: 400;
   line-height: 1.5;
   letter-spacing: 0.32px;
   margin-bottom: 8px;
 }
-.features-text,
-.portfolio-list-text {
-  margin-bottom: 0;
-}
+
 .features-title,
 .team-title,
 .portfolio-title {
@@ -77,16 +81,23 @@ box-sizing: border-box;
   text-transform: capitalize;
   margin-bottom: 72px;
 }
-.features-header,
+.features-header {
+  color: #2E2F42;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.72px;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
 .team-list-header,
 .portfolio-list-header {
-  color: #2E2F42;
   font-size: 20px;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.4px;
   margin-bottom: 8px;
-  /* text-align: center; */
 }
 /* ==================== ==================== */
 
@@ -178,15 +189,12 @@ gap: 40px;
 
 /* =================== MAIN 1st block =================== */
 .main-banner {
-  max-width: 1440px;
+  max-width: 320px;
   background: #2E2F42;
   background-image: linear-gradient(rgba(46, 47, 66, 0.70), rgba(46, 47, 66, 0.70)) , url(../images/people-office.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-
-  padding-top: 188px;
-  padding-bottom: 188px;
   margin: 0 auto;
 }
 
@@ -231,11 +239,13 @@ gap: 40px;
 
 .features-list {
   display: flex;
-  gap: 24px;
+  gap: 72px;
+  flex-wrap: wrap;
 }
 
 .features-item {
-  flex-basis: calc((100% - 72px) / 4);
+  width: 100%;
+  
 }
 
 .features-icon-list {
@@ -246,7 +256,6 @@ gap: 40px;
 
 .features-icon-wrapper {
   height: 112px;
-  display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 8px;
@@ -264,12 +273,13 @@ gap: 40px;
 
 .team-list {
   display: flex;
-  gap: 24px;
+  gap: 72px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .team-list-item {
   background-color: #FFFFFF;
-  flex-basis: calc((100% - 72px) / 4);
   border-radius: 0px 0px 4px 4px;
   box-shadow: 
   0px 1px 6px rgba(46, 47, 66, 0.08),
@@ -320,8 +330,7 @@ background-color: #404BBF;
 .portfolio-list {
 display: flex;
 flex-wrap: wrap;
-column-gap: 24px;
-row-gap: 48px;
+gap: 48px;
 }
 
 .app-info {
@@ -329,10 +338,11 @@ row-gap: 48px;
   border: 1px solid #e7e9fc;
   border-top: none;
   text-align: left;
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .portfolio-item {
-  width: calc((100% - 48px) / 3);
+  
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-img-wrap {
@@ -446,10 +456,6 @@ color: #f4f4fd;
   background-color: #31d0aa;
 }
 
-.footer-sub {
-  
-}
-
 .footer-sub-text {
   color:  #FFF;
   font-family: Roboto;
@@ -466,9 +472,6 @@ color: #f4f4fd;
   gap: 24px;
 }
 
-.footer-form-label {
-
-}
 .form-btn-sub {
   min-width: 165px;
   font-family: "Roboto", sans-serif;
@@ -743,3 +746,67 @@ fill: #F4F4FD;
 .modal-send-btn:hover {
   background-color: #404BBF;
 }
+/* ============ MEDIA ================ */
+@media screen and (min-width: 320px) {
+  .container {
+    
+  }
+
+    .features-icon-wrapper {
+      display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 736px;
+    padding: 0;
+  }
+
+  .features-list {
+    gap: 72px 24px;
+    padding: 0;
+  }
+
+  .features-item {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .features-header {
+    text-align: start;
+  }
+
+  .team-list {
+    gap: 64px 24px;
+  }
+}
+
+@media screen and (min-width: 1168px) {
+  .container {
+    max-width: 1128px;
+  }
+
+  .features-header {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.4px;
+  }
+
+  .features-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.32px;
+  }
+
+    .features-icon-wrapper {
+      display: flex;
+    }
+  
+  .features-item {
+    width: calc((100% - 72px) / 4);
+  }
+}
+
+/* ================= ================== */
