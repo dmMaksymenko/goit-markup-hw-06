@@ -894,6 +894,11 @@ fill: #F4F4FD;
     .features-icon-wrapper {
       display: none;
     }
+
+.portfolio-img {
+  width: 288px;
+  height: 280px;
+}
 }
 @media screen and (min-width: 768px) and (max-width: 1157px) {
   .footer .container {
@@ -904,7 +909,10 @@ fill: #F4F4FD;
   .container {
     max-width: 768px;
   }
-
+.portfolio-img {
+  width: 356px;
+  height: 300px;
+}
   .mob-menu {
     display: none;
   }
@@ -1051,6 +1059,11 @@ margin-left: 24px;
     padding-right: 15px;
     padding-left: 15px;
   }
+
+    .portfolio-img {
+      width: 360px;
+      height: 300px;
+    }
 
   .section {
     padding-top: 120px;
